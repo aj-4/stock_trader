@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+    <h2> Transaction History </h2>
+
+    <table>
+        <th>Date / Time</th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Purchase Price</th>
+        <th>Purchase Value</th>
+    {% for tran in trans %}
+    <tr>
+        <td>{{tran.datetime}}</td>
+        <td>{{tran.buy_sell}}</td>
+        <td>{{tran.symbol}}</td>
+        <td>{{tran.shares}} </td>
+        <td>{{tran.price|round(2)}} </td>
+        <td>{{tran.total|round(2)}}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+       <td id = "cash"> Current Cash : ${{ cash_total }} </td>
+    </tr>
+    </table>
+
+{% endblock %}

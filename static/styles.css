@@ -1,0 +1,77 @@
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* colors for navbar */
+.navbar-default .navbar-brand .blue
+{
+    color: #537fbe;
+}
+.navbar-default .navbar-brand .red
+{
+    color: #ea433b;
+}
+.navbar-default .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+.navbar-default .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main td
+{
+    /* left-align tables' cells */
+    text-align: left;
+    padding: 10px;
+}
+
+main table
+{
+    margin: 0 auto;
+}
+
+main th
+{
+    margin: 20px;
+    padding: 10px;
+    text-decoration: bold;
+}
+
+main td
+{
+    border-top: 2px darkgrey solid;
+    border-bottom: 2px darkgrey solid;
+    background: #f1f1f1;
+}
+
+#cash
+{
+    background: none;
+    border: none;
+}
+
+main h4
+{
+    color: darkgreen;
+}

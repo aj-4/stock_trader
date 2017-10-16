@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data for {{ ticker }}
+{% endblock %}
+
+{% block main %}
+    <p>
+        <h1>{{ symbol }}</h1>
+        <h2>{{ name }}</h2>
+        <h3>{{ price }}</h3>
+    </p>
+{% endblock %}

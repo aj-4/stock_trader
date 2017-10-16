@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Forgot Password
+{% endblock %}
+
+{% block main %}
+    <h2>Reset Password</h2>
+    <form action="{{ url_for('forgot') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="New Password" type="password"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="pwconfirm" placeholder="Confirm New Password" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Reset Password</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

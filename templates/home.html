@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio Summary
+{% endblock %}
+
+{% block main %}
+    <h1> Portfolio Value : ${{ total }} </h1>
+    <h3> Net Gain / Loss : {{total_gain}}%</h3>
+
+    <table>
+        <th>Name</th>
+        <th>Shares</th>
+        <th>Last Purchase Price</th>
+        <th>Current Price</th>
+        <th>Current Value</th>
+        <th>Gain / Loss</th>
+    {% for stock in stocks %}
+    <tr>
+        <td>{{stock.symbol}}</td>
+        <td>{{stock.shares}} </td>
+        <td>{{stock.last_price}} </td>
+        <td>{{stock.currprice}}</td>
+        <td>{{stock.total|round(2)}} </td>
+        <td>{{stock.gainloss}}%</td>
+    </tr>
+    {% endfor %}
+    <tr>
+       <td id = "cash"> Cash : ${{ cash_total }} </td>
+    </tr>
+    </table>
+
+{% endblock %}

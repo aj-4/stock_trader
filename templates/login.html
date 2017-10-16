@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h2>Login</h2>
+    <form action="{{ url_for('login') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Log In</button>
+            </div>
+            <a href="{{ url_for('forgot') }}" class="button">Forgot Password?</a>
+        </fieldset>
+    </form>
+{% endblock %}
